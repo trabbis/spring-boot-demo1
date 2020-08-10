@@ -1,5 +1,6 @@
 package com.example.demo3;
 
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -19,7 +20,6 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
           new HttpHeaders(), HttpStatus.NOT_FOUND, request);
     }
  
-    /*
     @ExceptionHandler({ BookIdMismatchException.class, 
       ConstraintViolationException.class, 
       DataIntegrityViolationException.class })
@@ -28,5 +28,4 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         return handleExceptionInternal(ex, ex.getLocalizedMessage(), 
           new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
     }
-    */
 }
