@@ -23,6 +23,7 @@ public class TestWebApp extends SpringBootDemo1ApplicationTests {
 	public void setup() {
 		mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
 	}
+
 	
 	@Test
 	public void testBooks() throws Exception {
